@@ -5,7 +5,7 @@ export default function Home() {
     <>
       <Navbar/>
       <div className='bg-red-500 text-4xl'>
-        Hello! 
+        Hello! This is Sochem
       </div>
     </>
   )
