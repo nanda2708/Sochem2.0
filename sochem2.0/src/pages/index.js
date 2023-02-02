@@ -4,8 +4,8 @@ export default function Home() {
   return (
     <>
       <Navbar/>
-      <div className='bg-red-500'>
-        Hello!
+      <div className='bg-red-500 text-4xl'>
+        Hello! Fuck Sochem
       </div>
     </>
   )
