@@ -1,12 +1,12 @@
 import Titlebar from "@/components/title";
 import { SectionTitle } from "@/components/section";
+import Navbar from "@/components/navbar";
 
 export default function Funds() {
     return (
         <div>
-            <div>Navbaar</div>
+            <Navbar/>
             <div class="bg-slate-100 py-10">
-
             <form class="mx-20 my-10 bg-white rounded-2xl flex flex-col md:flex-row">
                 <div class=" p-20 flex flex-col w-3/5">
                     <h1 class="text-3xl font-bold mb-6">Alumni Fund Form</h1>
