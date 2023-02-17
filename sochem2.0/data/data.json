@@ -7,6 +7,16 @@
       "url": "/images/2.jpg"
     }
   ],
+  "familyCarousel": [
+    {
+      "url": "/images/img-20220731-185354-1@2x.png"
+    },
+    {
+      "url": "/images/3.jpg"
+    }
+
+  ],
+  
   "navbarElements": [
     {
       "id": 1,
