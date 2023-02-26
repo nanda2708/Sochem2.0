@@ -16,7 +16,11 @@
     }
 
   ],
-  
+  "fundsCarousel": [
+    {
+      "url": "/images/fund.png"
+    }
+  ],
   "navbarElements": [
     {
       "id": 1,
