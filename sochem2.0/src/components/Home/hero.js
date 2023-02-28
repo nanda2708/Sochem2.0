@@ -1,13 +1,16 @@
 /* This example requires Tailwind CSS v3.0+ */
 import { useState } from 'react'
+import Link from 'next/link'
 import { Dialog } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 
 const navigation = [
-    { name: 'Events', href: '#' },
-    { name: 'Family', href: '#' },
-    { name: 'Forum', href: '#' },
-    { name: 'Funds', href: '#' },
+    { name: 'Events', href: '/events' },
+    { name: 'Funds', href: '/funds' },
+    { name: 'Gallery', href: '/gallery' },
+    { name: 'Family', href: '/family' },
+    { name: 'Forum', href: '/forum' },
+    { name: 'Cloud', href: '/cloud' },
 ]
 
 export default function Example() {
@@ -64,7 +67,7 @@ export default function Example() {
                     </div>
                     <div className="hidden lg:flex lg:gap-x-12">
                         {navigation.map((item) => (
-                            <a key={item.name} href={item.href} className="text-xl font-medium leading-6 text-white">
+                            <a key={item.name} href={item.href} className="hover:underline  2xl:text-xl text-[#F7FAFF] underline-offset-4 decoraton-8 decoration-[#2A6BFF] duration-100">
                                 {item.name}
                             </a>
                         ))}
@@ -113,7 +116,7 @@ export default function Example() {
                                 <div className="py-6">
                                     <a
                                         href="#"
-                                        className="-mx-3 block rounded-lg py-2.5 px-3 text-base font-semibold leading-6 text-gray-900 hover:bg-gray-400/10"
+                                        className="-mx-3 block rounded-xl py-2.5 px-3 text-base font-semibold leading-6 text-gray-900 hover:bg-gray-400/10"
                                     >
                                         Log in
                                     </a>
@@ -134,7 +137,7 @@ export default function Example() {
                                 <p>Unlocking the secrets of the universe,</p>
                                 <p>one electron at a time...</p>
                             </p>
-                            <div className="mt-10 flex items-center justify-start gap-x-6">
+                            <div className="mt-8 flex items-center justify-start gap-x-6">
                                 <a
                                     className="rounded-md bg-indigo-600 px-3.5 py-1.5 text-base font-semibold leading-7 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
                                 >

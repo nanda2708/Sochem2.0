@@ -19,7 +19,7 @@ const events = () => {
                     <EventsCard key={i.id} title={i.title} description={i.description} />
                 ))}
             </div>
-        </div >
+        </div>
     )
 }
 
