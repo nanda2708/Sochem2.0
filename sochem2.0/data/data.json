@@ -93,37 +93,12 @@
     },
     {
       "id": 3,
-      "title": "Osmoze",
+      "title": "Workshops & Competitions",
       "description": "lorem ipsum"
     },
     {
       "id": 4,
-      "title": "Osmoze",
-      "description": "lorem ipsum"
-    },
-    {
-      "id": 5,
-      "title": "Festivals",
-      "description": "lorem ipsum"
-    },
-    {
-      "id": 6,
-      "title": "Osmoze",
-      "description": "lorem ipsum"
-    },
-    {
-      "id": 7,
-      "title": "Osmoze",
-      "description": "lorem ipsum"
-    },
-    {
-      "id": 8,
-      "title": "Osmoze",
-      "description": "lorem ipsum"
-    },
-    {
-      "id": 9,
-      "title": "Osmoze",
+      "title": "Others",
       "description": "lorem ipsum"
     }
   ]
