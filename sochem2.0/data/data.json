@@ -50,7 +50,10 @@
   ],
   "fundsCarousel": [
     {
-      "url": "/images/fund.png"
+      "url": "/images/funds1.png"
+    },
+    {
+      "url": "/images/funds2.png"
     }
   ],
   "navbarElements": [
