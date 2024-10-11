@@ -1,0 +1,108 @@
+{
+  "testimonials": [
+    {
+      "id": 1,
+      "name": "Sahil Saini",
+      "designation": "Batch Of 2024",
+      "review": "“I feel SoChem is what that knits this huge department of ours together. At SoChem, we came together, had fun, learned, and grew”"
+    },
+    {
+      "id": 2,
+      "name": "Devansh Mishra",
+      "designation": "Batch Of 2024",
+      "review": "“I feel SoChem is what that knits this huge department of ours together. At SoChem, we came together, had fun, learned, and grew”"
+    },
+    {
+      "id": 3,
+      "name": "Aditya Kumar Singh",
+      "designation": "Batch Of 2024",
+      "review": "“I feel SoChem is what that knits this huge department of ours together. At SoChem, we came together, had fun, learned, and grew”"
+    },
+    {
+      "id": 4,
+      "name": "Akshun Mishra",
+      "designation": "Batch Of 2025",
+      "review": "“I feel SoChem is what that knits this huge department of ours together. At SoChem, we came together, had fun, learned, and grew”"
+    },
+    {
+      "id": 5,
+      "name": "Devansh Choudhary",
+      "designation": "Batch Of 2025",
+      "review": "“I feel SoChem is what that knits this huge department of ours together. At SoChem, we came together, had fun, learned, and grew”"
+    }
+  ],
+  "eventsCarousel": [
+    {
+      "url": "/images/3.jpg"
+    },
+    {
+      "url": "/images/2.jpg"
+    }
+  ],
+  "familyCarousel": [
+    {
+      "url": "/images/img-20220731-185354-1@2x.png"
+    },
+    {
+      "url": "/images/3.jpg"
+    }
+
+  ],
+  "fundsCarousel": [
+    {
+      "url": "/images/funds1.png"
+    },
+    {
+      "url": "/images/funds2.png"
+    }
+  ],
+  "navbarElements": [
+    {
+      "id": 1,
+      "title": "Home",
+      "href": "/home"
+    },
+    {
+      "id": 2,
+      "title": "Events",
+      "href": "/events"
+    },
+    {
+      "id": 3,
+      "title": "Funds",
+      "href": "/funds"
+    },
+    {
+      "id": 4,
+      "title": "Gallery",
+      "href": "/gallery"
+    },
+    {
+      "id": 5,
+      "title": "Family",
+      "href": "/family"
+    }
+  ],
+  "eventsCard": [
+    {
+      "id": 1,
+      "title": "Osmoze",
+      "description": "lorem ipsum"
+    },
+    {
+      "id": 2,
+      "title": "Festivals",
+      "description": "lorem ipsum"
+    },
+    {
+      "id": 3,
+      "title": "Workshops & Competitions",
+      "description": "lorem ipsum"
+    },
+    {
+      "id": 4,
+      "title": "Others",
+      "description": "lorem ipsum"
+    }
+  ]
+}
