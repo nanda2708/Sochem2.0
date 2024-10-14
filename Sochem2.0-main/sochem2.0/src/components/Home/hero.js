@@ -17,7 +17,7 @@ export default function Example() {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
     return (
-        <div className="isolate rounded-b-xl bg-[#040D21]">
+        <div className="isolate rounded-b-xl bg-[#040D21] ">
             <div className="absolute inset-x-0 top-[-10rem] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[-20rem]">
                 <svg
                     className="relative left-[calc(50%-11rem)] -z-10 h-[21.1875rem] max-w-none -translate-x-1/2 rotate-[30deg] sm:left-[calc(50%-30rem)] sm:h-[42.375rem]"
@@ -76,7 +76,7 @@ export default function Example() {
               Log in <span aria-hidden="true">&rarr;</span>
             </a> */}
                             <a
-                                href="#"
+                                href="/login"
                                 className="rounded-md bg-indigo-600 px-3.5 py-1.5 text-base font-semibold leading-7 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
                             >
                                 Login
@@ -115,7 +115,7 @@ export default function Example() {
                                 </div>
                                 <div className="py-6">
                                     <a
-                                        href="#"
+                                        href="/login"
                                         className="-mx-3 block rounded-xl py-2.5 px-3 text-base font-semibold leading-6 text-gray-900 hover:bg-gray-400/10"
                                     >
                                         Log in
@@ -138,7 +138,8 @@ export default function Example() {
                                 <p>one electron at a time...</p>
                             </p>
                             <div className="mt-8 flex items-center justify-start gap-x-6">
-                                <a
+                                <a  
+                                    href="/login"
                                     className="rounded-md bg-indigo-600 px-3.5 py-1.5 text-base font-semibold leading-7 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
                                 >
                                     Login
