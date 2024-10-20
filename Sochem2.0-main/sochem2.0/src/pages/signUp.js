@@ -1,9 +1,27 @@
-
+import { signInWithPopup } from "firebase/auth";
+import { auth, provider } from "@/firebase/firebaseConfig";
+import { useRouter } from "next/router";
 import Image from 'next/image'
 import { FaGoogle } from 'react-icons/fa'
 import Link from 'next/link'
 
 export default function Login() {
+
+  const router = useRouter();
+
+  const signUpWithGoogle = async () => {
+    try {
+      const result = await signInWithPopup(auth, provider);
+      console.log(result.user);
+      const { displayName, email, photoURL } = result.user;
+      const user = { name: displayName, email, avatar: photoURL };
+      localStorage.setItem("user", JSON.stringify(user));
+      router.push("/");
+    } catch (error) {
+      console.error("Error signing in: ", error);
+    }
+  };
+
     return (
         <div className="isolate bg-[#040D21] h-[100vh] overflow-hidden">
             <div className="absolute inset-x-0 top-[-10rem] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[-20rem]">
@@ -54,7 +72,7 @@ export default function Login() {
                                 <h2 class="text-4xl font-bold mb-1  text-sky-600">S<span class="text-black">ochem</span></h2>
                             </div>
 
-                            <button className="flex items-center justify-center w-full bg-red-500 text-white py-2 px-4 rounded hover:bg-red-600 transition duration-300">
+                            <button className="flex items-center justify-center w-full bg-red-500 text-white py-2 px-4 rounded hover:bg-red-600 transition duration-300" onClick={signUpWithGoogle}>
                                 <FaGoogle className="mr-2" />
                                 Sign up with Google
                             </button>
