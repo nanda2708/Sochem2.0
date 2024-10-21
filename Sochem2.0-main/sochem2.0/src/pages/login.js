@@ -5,6 +5,10 @@ import Image from "next/image";
 import { FaGoogle } from "react-icons/fa";
 import Link from "next/link";
 
+import members from "../../data/members.json";
+import toast, { Toaster } from "react-hot-toast";
+
+
 export default function Login() {
   const router = useRouter();
 
@@ -14,8 +18,17 @@ export default function Login() {
       console.log(result.user);
       const { displayName, email, photoURL } = result.user;
       const user = { name: displayName, email, avatar: photoURL };
-      localStorage.setItem("user", JSON.stringify(user));
-      router.push("/");
+
+      const emailFound = members.some(item => item["Email ID"] === email.toLowerCase());
+
+      if(emailFound) {
+          localStorage.setItem("user", JSON.stringify(user));
+          router.push("/");
+          toast.success("Signed Up Successfully 🥳", {duration: 5000});
+        
+      }
+      else toast.error("You are not a SoChem Member 😔");
+
     } catch (error) {
       console.error("Error logging in: ", error);
     }
@@ -23,6 +36,7 @@ export default function Login() {
 
   return (
     <div className="isolate bg-[#040D21] h-[100vh] overflow-hidden">
+      <div><Toaster/> </div>
       <div className="absolute inset-x-0 top-[-10rem] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[-20rem]">
         <svg
           className="relative left-[calc(50%-11rem)] -z-10 h-[21.1875rem] max-w-none -translate-x-1/2 rotate-[30deg] sm:left-[calc(50%-30rem)] sm:h-[42.375rem]"
