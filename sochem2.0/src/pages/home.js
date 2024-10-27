@@ -4,6 +4,7 @@ import Main from "../components/Home/main"
 import Testimonial from "../components/Home/testimonials"
 import Footer from '@/components/footer.js'
 import What_we_offer from '../components/Home/what_we_offer'
+
 const home = () => {
   return (
     <div>
