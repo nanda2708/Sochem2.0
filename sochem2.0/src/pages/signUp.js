@@ -9,6 +9,9 @@ import toast, { Toaster } from "react-hot-toast";
 
 import { membersDataService, verifyEmail } from "../../services/db_services";
 
+import Navbar from "@/components/navbar";
+import Footer from '@/components/footer.js';
+
 export default function Login() {
   const router = useRouter();
 
@@ -59,6 +62,8 @@ export default function Login() {
   };
 
   return (
+    <>
+    <Navbar/>
     <div className="isolate bg-[#040D21] h-[100vh] overflow-hidden">
       <div>
         <Toaster />{" "}
@@ -157,5 +162,7 @@ export default function Login() {
         </div>
       </main>
     </div>
+    <Footer/>
+    </>
   );
 }
