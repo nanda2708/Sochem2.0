@@ -7,7 +7,11 @@ import { useRouter } from "next/router";
 
 import toast, { Toaster } from "react-hot-toast";
 
-import {verifyEmail} from "../../services/db_services"
+import {verifyEmail} from "../../services/db_services";
+
+import Navbar from "@/components/navbar";
+import Footer from '@/components/footer.js';
+
 
 
 export default function Login() {
@@ -39,6 +43,8 @@ export default function Login() {
   };
 
   return (
+    <>
+    <Navbar/>
     <div className="isolate bg-[#040D21] h-[100vh] overflow-hidden">
       <div><Toaster/> </div>
       <div className="absolute inset-x-0 top-[-10rem] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[-20rem]">
@@ -134,5 +140,7 @@ export default function Login() {
         </div>
       </main>
     </div>
+    <Footer/>
+    </>
   );
 }
