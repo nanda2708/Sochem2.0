@@ -6,8 +6,8 @@ import Footer from '@/components/footer.js'
  const Cloud=()=>{
   return (
     <div>
-      <Navbar/>
       <div className="bg-[#040D21]">
+      <Navbar/>
         <div>
         <div className='font-medium flex text-[#F7FAFF] justify-center text-2xl sm:text-3xl lg:text-5xl'><div className='mt-12 mb-12'>Resources Vault</div></div>
           

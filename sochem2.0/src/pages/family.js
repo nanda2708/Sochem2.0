@@ -7,8 +7,8 @@ import FamilyCarousel from '../components/familyCarousel'
 export default function Family() {
   return (
     <div className="relative bg-gray-100 w-full h-[2247px] overflow-hidden text-left text-base text-darkslateblue font-product-sans">
-      <Navbar />
       <div className='bg-[#040D21] w-full '>
+                <Navbar />
                 <p className='font-medium flex text-[#F7FAFF] justify-center text-2xl sm:text-3xl lg:text-5xl'><p className='mt-20'>Our<span className='text-[#2A6BFF]'> Amazing</span> Family</p></p>
                 <FamilyCarousel />
       </div>

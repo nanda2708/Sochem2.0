@@ -5,8 +5,8 @@ import Footer from "@/components/footer.js";
 export default function Funds() {
   return (
     <div>
-      <Navbar />
       <div className="bg-[#040D21] w-full ">
+        <Navbar />
         <div className="font-medium flex text-[#F7FAFF] justify-center text-2xl sm:text-3xl lg:text-5xl">
           <p className="mt-20">
             The<span className="text-[#2A6BFF]"> Grand</span> Alumni!

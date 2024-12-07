@@ -8,8 +8,8 @@ import data from "../../data/data.json";
 const events = () => {
   return (
     <div>
-      <Navbar />
       <div className="bg-[#040D21] w-full ">
+        <Navbar />
         <p className="font-medium flex text-[#F7FAFF] justify-center text-2xl sm:text-3xl lg:text-5xl">
           <span className="mt-20">
             A Collection of <span className="text-[#2A6BFF]">Nostalgic</span>

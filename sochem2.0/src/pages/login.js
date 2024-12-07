@@ -44,7 +44,6 @@ export default function Login() {
 
   return (
     <>
-    <Navbar/>
     <div className="isolate bg-[#040D21] h-[100vh] overflow-hidden">
       <div><Toaster/> </div>
       <div className="absolute inset-x-0 top-[-10rem] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[-20rem]">
@@ -73,7 +72,7 @@ export default function Login() {
           </defs>
         </svg>
       </div>
-
+      <Navbar/>
       <main>
         <div className="px-8 lg:px-8 h-[60rem]">
           <div className="flex justify-center items-center h-[100vh] overflow-hidden bg-inherit">
