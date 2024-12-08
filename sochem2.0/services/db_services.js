@@ -9,7 +9,8 @@ import {
   where,
 } from "firebase/firestore";
 
-const dbRef = collection(db, "members");
+const dbRef = collection(db, "members");;
+
 class MembersDataService {
   addMembers = (member) => {
     return addDoc(dbRef, member);
@@ -22,11 +23,14 @@ class MembersDataService {
 }
 
 async function verifyEmail(email) {
+
   const q = query(dbRef, where("email", "==", email));
   const querySnapshot = await getDocs(q);
 
   if (!querySnapshot.empty) return true;
   else return false;
 }
+
 const membersDataService = new MembersDataService();
+
 export { membersDataService, verifyEmail };
