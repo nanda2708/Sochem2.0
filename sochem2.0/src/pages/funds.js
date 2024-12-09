@@ -3,35 +3,38 @@ import FundsCarousel from "@/components/fundsCarousel";
 import Footer from "@/components/footer.js";
 import React, { useState } from "react";
 import { useRouter } from "next/router";
-import FundsDataService from '../../services/funds_db_services'
+import FundsDataService from "../../services/funds_db_services";
 
 import toast, { Toaster } from "react-hot-toast";
 
 export default function Funds() {
-
   const router = useRouter();
   const [formValues, setFormValues] = useState("");
   const [screenshot, setScreenshot] = useState(null);
 
   const handleInput = (event) => {
     setFormValues({
-      ...formValues, [event.target.name] : event.target.value,
+      ...formValues,
+      [event.target.name]: event.target.value,
     });
-  }
+  };
 
   const handleFileInput = (event) => {
     setScreenshot(event.target.files[0]);
   };
 
-  const handleSubmit = async(event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
 
     const fundEntry = {
-      amount: Number(formValues["amount"]), batch: Number(formValues["batch"]), 
-      company: formValues["company"], contact: Number(formValues["contact"]), 
-      email: formValues["email"], linkedin: formValues["linkedin"],
-      name: formValues["name"]
-    }
+      amount: Number(formValues["amount"]),
+      batch: Number(formValues["batch"]),
+      company: formValues["company"],
+      contact: Number(formValues["contact"]),
+      email: formValues["email"],
+      linkedin: formValues["linkedin"],
+      name: formValues["name"],
+    };
 
     try {
       let screenshotURL = "";
@@ -50,11 +53,13 @@ export default function Funds() {
       console.log(err);
       toast.error("An error occurred!");
     }
-  }
+  };
 
   return (
-      <div>
-        <div className="bg-[#040D21]"><Navbar /></div>
+    <div>
+      <div className="bg-[#040D21]">
+        <Navbar />
+      </div>
       <div className="bg-[#040D21] w-full ">
         <Toaster />
 
@@ -66,34 +71,42 @@ export default function Funds() {
         <FundsCarousel />
       </div>
       <div className="bg-slate-100 py-10">
-        <form id='fund-form' className="mx-20 my-10 bg-white rounded-2xl flex flex-col md:flex-row"
-              onSubmit={(event) => handleSubmit(event)}>
+        <form
+          id="fund-form"
+          className="mx-20 my-10 bg-white rounded-2xl flex flex-col md:flex-row"
+          onSubmit={(event) => handleSubmit(event)}
+        >
           <div className=" p-20 flex flex-col w-3/5">
             <h1 className="text-3xl font-bold mb-6">Alumni Fund Form</h1>
             <div className="pb-5 justify-between flex">
               <label className="text-lg">Email*</label>
               <input
                 className="bg-slate-200 ring-1 rounded p-1 text-sm w-30 md:w-40 lg:w-56 xl:w-64"
-                placeholder="abc@company.com" name="email" 
-                type="email" onChange={(event) => handleInput(event)}
+                placeholder="abc@company.com"
+                name="email"
+                type="email"
+                onChange={(event) => handleInput(event)}
                 required
               ></input>
             </div>
             <div className="pb-5 justify-between flex">
-              <label class="text-lg">Name* </label>
+              <label className="text-lg">Name* </label>
               <input
                 className="bg-slate-200 ring-1 rounded p-1 text-sm w-30 md:w-40 lg:w-56 xl:w-64"
-                placeholder="Ethan Hunt" name="name"
+                placeholder="Ethan Hunt"
+                name="name"
                 onChange={(event) => handleInput(event)}
                 required
               />
             </div>
             <div className="pb-5 justify-between flex">
-              <label class="text-lg">Batch*</label>
+              <label className="text-lg">Batch*</label>
               <input
                 className="bg-slate-200 ring-1 rounded p-1 text-sm w-30 md:w-40 lg:w-56 xl:w-64"
-                placeholder="2000" name="batch" 
-                type="number" onChange={(event) => handleInput(event)}
+                placeholder="2000"
+                name="batch"
+                type="number"
+                onChange={(event) => handleInput(event)}
                 required
               />
             </div>
@@ -101,8 +114,10 @@ export default function Funds() {
               <label className="text-lg">LinkedIn Profile* </label>
               <input
                 className="bg-slate-200 ring-1 rounded p-1 text-sm w-30 md:w-40 lg:w-56 xl:w-64"
-                placeholder="http://linkedin.com/in/accountaname" name="linkedin"
-                type="url" onChange={(event) => handleInput(event)} 
+                placeholder="http://linkedin.com/in/accountaname"
+                name="linkedin"
+                type="url"
+                onChange={(event) => handleInput(event)}
                 required
               />
             </div>
@@ -110,8 +125,10 @@ export default function Funds() {
               <label className="text-lg">Contact No*</label>
               <input
                 className="bg-slate-200 ring-1 rounded p-1 text-sm w-30 md:w-40 lg:w-56 xl:w-64"
-                placeholder="9999999999" name="contact" 
-                type="number" onChange={(event) => handleInput(event)}
+                placeholder="9999999999"
+                name="contact"
+                type="number"
+                onChange={(event) => handleInput(event)}
                 required
               />
             </div>
@@ -119,7 +136,8 @@ export default function Funds() {
               <label className="text-lg">Current Company*</label>
               <input
                 className="bg-slate-200 ring-1 rounded p-1 text-sm w-30 md:w-40 lg:w-56 xl:w-64"
-                placeholder="Apple Inc." name="company" 
+                placeholder="Apple Inc."
+                name="company"
                 onChange={(event) => handleInput(event)}
                 required
               />
@@ -128,8 +146,10 @@ export default function Funds() {
               <label className="text-lg">Amount* </label>
               <input
                 className="bg-slate-200 ring-1 rounded p-1 text-sm w-30 md:w-40 lg:w-56 xl:w-64"
-                placeholder="50000" name="amount" 
-                type="number" onChange={(event) => handleInput(event)}
+                placeholder="50000"
+                name="amount"
+                type="number"
+                onChange={(event) => handleInput(event)}
                 required
               />
             </div>
@@ -147,7 +167,8 @@ export default function Funds() {
             <button
               className="bg-black text-white text-xl rounded-full mt-5 py-1 "
               type="submit"
-              onClick={(event) => handleSubmit(event)}>
+              onClick={(event) => handleSubmit(event)}
+            >
               SUBMIT
             </button>
           </div>
@@ -158,10 +179,10 @@ export default function Funds() {
               development of its members. Alumni Funds helps us arrange events
               and competitions!{" "}
             </p>
-            <h1 class="text-3xl font-bold mb-3">Account Details </h1>
-            <img src='/img/qr.jpeg' class="h-40 w-40 pb-3" />
-            <p class="mb-10">UPI Id: priyanshu.j.smarty@oksbi</p>
-            <h1 class="text-3xl font-bold mb-2">Contact Us:</h1>
+            <h1 className="text-3xl font-bold mb-3">Account Details </h1>
+            <img src="/img/qr.jpeg" className="h-40 w-40 pb-3" />
+            <p className="mb-10">UPI Id: priyanshu.j.smarty@oksbi</p>
+            <h1 className="text-3xl font-bold mb-2">Contact Us:</h1>
             abc@iitbhu.ac.in
           </div>
         </form>
