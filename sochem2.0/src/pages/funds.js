@@ -11,12 +11,17 @@ export default function Funds() {
 
   const router = useRouter();
   const [formValues, setFormValues] = useState("");
+  const [screenshot, setScreenshot] = useState(null);
 
   const handleInput = (event) => {
     setFormValues({
       ...formValues, [event.target.name] : event.target.value,
     });
   }
+
+  const handleFileInput = (event) => {
+    setScreenshot(event.target.files[0]);
+  };
 
   const handleSubmit = async(event) => {
     event.preventDefault();
@@ -29,16 +34,21 @@ export default function Funds() {
     }
 
     try {
-        await FundsDataService.addEntry(fundEntry);
-        router.push("/funds");
+      let screenshotURL = "";
+      if (screenshot) {
+        screenshotURL = await FundsDataService.uploadScreenshot(screenshot);
+      }
 
-        document.getElementById("fund-form").reset();
+      await FundsDataService.addEntry({ ...fundEntry, screenshotURL });
+      router.push("/funds");
 
-        toast.success("Thanks for your donation! 🥳");
+      document.getElementById("fund-form").reset();
+      setScreenshot(null);
 
-    } catch(err) {
-        console.log(err);
-        toast.error("An error occured!");
+      toast.success("Thanks for your donation! 🥳");
+    } catch (err) {
+      console.log(err);
+      toast.error("An error occurred!");
     }
   }
 
@@ -114,12 +124,22 @@ export default function Funds() {
                 required
               />
             </div>
-            <div className="pb-10 justify-between flex">
+            <div className="pb-5 justify-between flex">
               <label className="text-lg">Amount* </label>
               <input
                 className="bg-slate-200 ring-1 rounded p-1 text-sm w-30 md:w-40 lg:w-56 xl:w-64"
                 placeholder="50000" name="amount" 
                 type="number" onChange={(event) => handleInput(event)}
+                required
+              />
+            </div>
+            <div className="pb-10 justify-between flex">
+              <label className="text-lg">Payment Screenshot* </label>
+              <input
+                className="bg-slate-200 ring-1 rounded p-1 text-sm w-30 md:w-40 lg:w-56 xl:w-64"
+                type="file"
+                accept="image/*"
+                onChange={(event) => handleFileInput(event)}
                 required
               />
             </div>
