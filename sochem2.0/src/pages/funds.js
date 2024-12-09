@@ -54,7 +54,7 @@ export default function Funds() {
 
   return (
       <div>
-      <Navbar />
+        <div className="bg-[#040D21]"><Navbar /></div>
       <div className="bg-[#040D21] w-full ">
         <Toaster />
 
