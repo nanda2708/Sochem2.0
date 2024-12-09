@@ -139,8 +139,8 @@ export default function Funds() {
               and competitions!{" "}
             </p>
             <h1 class="text-3xl font-bold mb-3">Account Details </h1>
-            <img class="h-40 w-40 rounded pb-3" />
-            <p class="mb-10">UPI Id: 9026663689@paytm</p>
+            <img src='/img/qr.jpeg' class="h-40 w-40 pb-3" />
+            <p class="mb-10">UPI Id: priyanshu.j.smarty@oksbi</p>
             <h1 class="text-3xl font-bold mb-2">Contact Us:</h1>
             abc@iitbhu.ac.in
           </div>
