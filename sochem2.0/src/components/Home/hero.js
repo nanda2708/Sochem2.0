@@ -12,7 +12,6 @@ const navigation = [
   { name: "Funds", href: "/funds" },
   { name: "Gallery", href: "/gallery" },
   { name: "Family", href: "/family" },
-  { name: "Forum", href: "/forum" },
   { name: "Cloud", href: "/cloud" },
 ];
 

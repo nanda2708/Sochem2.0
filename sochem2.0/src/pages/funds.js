@@ -183,7 +183,7 @@ export default function Funds() {
             <img src="/img/qr.jpeg" className="h-40 w-40 pb-3" />
             <p className="mb-10">UPI Id: priyanshu.j.smarty@oksbi</p>
             <h1 className="text-3xl font-bold mb-2">Contact Us:</h1>
-            abc@iitbhu.ac.in
+            soc.che@iitbhu.ac.in
           </div>
         </form>
       </div>
